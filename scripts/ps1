@@ -1,13 +1,13 @@
 #!/bin/bash
 
+VCS_PROMPT=""
+
 if [[ -d ".svn" ]]
 then
   SVN_ROOT=`svn info 2>&1 |  grep "Repository Root" | cut -d '/' -f 3- `
   if [[ -n "$SVN_ROOT" ]]
   then
     VCS_PROMPT="\[\033[00;33m\](\[\033[00;37m\]$SVN_ROOT\[\033[00;33m\]) \[\033[01;34m\]"
-  else
-    VCS_PROMPT="no"
   fi
 fi
 

@@ -1,0 +1,21 @@
+set nocp
+set paste
+
+syntax enable
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
+
+highlight Normal ctermfg=darkblue ctermbg=black
+highlight BadWhitespace ctermbg=red guibg=red
+au BufRead,BufNewFile *py,*pyw,*.c,*.h set tabstop=4
+au BufRead,BufNewFile *.py,*pyw set shiftwidth=4
+au BufRead,BufNewFile *.py,*.pyw set expandtab
+au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /^\t\+/
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h set textwidth=79
+au BufNewFile *.py,*.pyw,*.c,*.h set fileformat=unix
+let python_highlight_all=1
+
+set autoindent
+set encoding=utf-8
