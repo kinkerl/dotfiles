@@ -1,0 +1,10 @@
+Bugs
+===========
+
+* .vimrc check does not work if the file does not exist
+
+
+Features
+============
+
+* add solarized color schema
