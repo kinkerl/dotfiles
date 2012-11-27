@@ -3,8 +3,6 @@ set paste
 
 syntax enable
 set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
 
 highlight Normal ctermfg=darkblue ctermbg=black
 highlight BadWhitespace ctermbg=red guibg=red
